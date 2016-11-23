@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SocketIO Chat</title>
+    <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel='stylesheet' href='main.css'>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class='jumbotron header'>
+        <h1>Welcome to SocketIO Chat!</h1>
+        <h3>Start chatting with others connected to the chatroom</h3>
+      </div>
+
+      <ul id="chat-messages"></ul>
+
+      <form action="">
+        <input class="chatBox" placeholder="Type your message here" id="content" autocomplete="off" />
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>
+    </div>
+
+    <script src='/socket.io/socket.io.js'></script>
+    <script src="http://code.jquery.com/jquery-1.11.1.js"></script>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <script src='client.js'></script>
+  </body>
+
+</html>

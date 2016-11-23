@@ -1,8 +1,25 @@
-var app = require('express')();
+var express = require('express')
+var app = express();
 var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
-app.get('/', function(req, res){
-  res.send('<h1>Hello world</h1>');
+app.use(express.static('public'))
+
+io.on('connection', function(socket){
+  console.log('A user successfully connected!');
+  socket.on('disconnect', function(socket) {
+    console.log("A user has disconneted.")
+  });
+
+  socket.on('set_name', function(name) {
+    console.log("Setting name to: " + name);
+    io.emit()
+  });
+
+  socket.on('message', function(message) {
+    console.log('Message: ' + message);
+    io.emit('incoming_message', message);
+  });
 });
 
 http.listen(3000, function(){

@@ -1,0 +1,34 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+form {
+  margin: 10px;
+  text-align: center;
+}
+
+#chat-messages {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+#chat-messages li {
+  padding: 5px 10px;
+}
+
+#chat-messages li:nth-child(odd) {
+  background: #FFE0BD;
+}
+
+.header {
+  margin: 25px;
+  text-align: center;
+}
+
+.chatBox {
+  padding: 5px;
+  width: 80%;
+}
