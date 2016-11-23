@@ -11,11 +11,6 @@ io.on('connection', function(socket){
     console.log("A user has disconneted.")
   });
 
-  socket.on('set_name', function(name) {
-    console.log("Setting name to: " + name);
-    io.emit()
-  });
-
   socket.on('message', function(message) {
     console.log('Message: ' + message);
     io.emit('incoming_message', message);

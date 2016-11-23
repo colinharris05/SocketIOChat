@@ -1,7 +1,8 @@
 var socket = io();
 
 var Events = {
-  Message: 'message'
+  Message: 'message',
+  IncomingMessage: 'incoming_message'
 };
 
 $('form').submit(function() {
@@ -10,6 +11,6 @@ $('form').submit(function() {
   return false;
 });
 
-socket.on('incoming_message', function(message) {
+socket.on(Events.IncomingMessage, function(message) {
   $('#chat-messages').append($('<li>').text(message));
 });
